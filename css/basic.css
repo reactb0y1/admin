@@ -58,6 +58,7 @@ a:hover, a:active  {
     --widthContent: 1100px;
 
     /*Отступы*/
+    --g-g: 3px;
 
 }
 
@@ -93,13 +94,21 @@ h2, p, button {
     font-weight: bold;
 }
 
+/*header*/
+
 .header_top {
     display: grid;
     grid-template-areas: "h2 h2 h2 h2 h2 btn"
                         "p p p p p p";
-    grid-gap: 3px;
+    grid-gap: var(--g-g);
 }
 
 .header_top_h2 {grid-area: h2}
 .header_top_button {grid-area: btn}
 .header_top_p {grid-area: p}
+
+.header_nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--g-g);
+}
