@@ -421,6 +421,17 @@ textarea {
     left: 314px;
 }
 
+.main_center_table {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns: repeat(8, minmax(20px, 1fr));
+}
+
+.main_center_table p {
+    background: var(--bg-blocked);
+    width: auto;
+}
+
 /*footer*/
 
 .footer {
