@@ -207,6 +207,30 @@ input {
                         calc( 100% / 6 );
 }
 
+.main_email {
+    overflow: auto;
+    height: calc(
+            var(--cells-h) * 8 +
+            var(--g-g) * 7
+    );
+}
+
+.main_email_li {
+    text-indent: var(--t-i);
+    color: var(--c-f-2);
+}
+
+.main_textarea {
+    resize: none;
+    height: calc(
+            var(--cells-h) * 3 +
+            var(--g-g) * 2
+    );
+    text-indent: var(--t-i);
+    padding-top: var(--t-i);
+    color: var(--c-f-2);
+}
+
 /*footer*/
 
 .footer {
