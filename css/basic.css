@@ -113,6 +113,11 @@ input {
     text-indent: var(--t-i);
 }
 
+.blocked {
+    background-color: var(--bg-blocked);
+    color: var(--c-f-2);
+}
+
 /*header*/
 
 .header {
@@ -146,6 +151,10 @@ input {
     background-color: var(--c-f-2);
 }
 
+.header_top > div + .header_top_p {
+    text-align: center;
+}
+
 /*main*/
 
 .main {
@@ -156,6 +165,15 @@ input {
             ( var(--g-g) * 10 )
     );
     align-content: flex-start;
+}
+
+.redactor .main_h3,
+.redactor .main_p {
+    width: calc( 100% / 3 );
+}
+
+.main_p + .main_h3 {
+    margin-top: calc( var(--cells-h) + var(--g-g) * 2 );
 }
 
 .main h3,
