@@ -109,13 +109,14 @@ h2, h3, p, button {
 
 .header_top {
     display: grid;
-    grid-template-areas: "h2 h2 h2 h2 h2 btn"
+    grid-template-areas: "h2 h2 h2 h2 btn-back btn"
                         "p p p p p p";
     grid-gap: var(--g-g);
 }
 
 .header_top_h2 {grid-area: h2}
 .header_top_button {grid-area: btn}
+.header_top_button-back {grid-area: btn-back}
 .header_top_p {grid-area: p}
 
 .header_nav {
