@@ -5,6 +5,7 @@
     border: 0;
     outline: none;
     vertical-align: baseline;
+    font-family: Arial;
     font-weight: inherit;
     font-style: inherit;
     font-size: 100%;
@@ -65,4 +66,40 @@ a:hover, a:active  {
 .container {
     width: 90% !important;
     margin: 40px auto;
+    background: var(--bg-main);
 }
+
+h2 {
+    color: var(--c-f-2);
+    font-size: var(--f-b);
+    line-height: 125%;
+}
+
+p {
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    line-height: 150%;
+}
+
+button {
+    background: var(--bg-btn);
+    font-size: var(--f-n);
+    color: var(--c-f-1);
+    border-radius: 3px;
+}
+
+h2, p, button {
+    height: 35px;
+    font-weight: bold;
+}
+
+.header_top {
+    display: grid;
+    grid-template-areas: "h2 h2 h2 h2 h2 btn"
+                        "p p p p p p";
+    grid-gap: 3px;
+}
+
+.header_top_h2 {grid-area: h2}
+.header_top_button {grid-area: btn}
+.header_top_p {grid-area: p}
