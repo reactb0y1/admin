@@ -260,6 +260,7 @@ textarea {
 }
 
 .main_redactor > * {
+    display: grid;
     grid-gap: var(--g-g);
 }
 
@@ -307,7 +308,11 @@ textarea {
     color: var(--c-f-2);
 }
 
-    /*footer*/
+.main_top-center {
+    grid-template-columns: 1fr 1fr;
+}
+
+/*footer*/
 
 .footer {
     display: grid;
