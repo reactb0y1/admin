@@ -41,6 +41,7 @@ a:hover, a:active  {
     --f-b: 30px;
     --f-n: 19.5px;
     --f-s: 15.5px;
+    --t-i: 12px;
 
     /*Цвета*/
     --bg-main: #f2f2f2;
@@ -63,7 +64,7 @@ a:hover, a:active  {
 /*Универсальные классы*/
 .container {
     width: 90% !important;
-    margin: 40px auto;
+    margin: 0 auto;
     background: var(--bg-main);
     display: grid;
     grid-gap: 3px;
@@ -94,6 +95,12 @@ button {
     color: var(--c-f-1);
     border-radius: 3px;
     font-weight: bold;
+}
+
+select, option {
+    text-indent: var(--t-i);
+    font-size: var(--f-s);
+    color: var(--c-f-2);
 }
 
 h2, h3, p, button {
@@ -153,7 +160,7 @@ h2, h3, p, button {
 .main h3,
 .main p,
 .main button {
-    text-indent: 12px;
+    text-indent: var(--t-i);
 }
 
 .main p {
@@ -184,4 +191,10 @@ h2, h3, p, button {
 
 .footer_content {
     height: var(--cells-h);
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-areas: "btn-f . . . select select";
 }
+
+.footer_content_button {grid-area: btn-f}
+.footer_content_select {grid-area: select}
