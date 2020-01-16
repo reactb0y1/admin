@@ -253,7 +253,10 @@ textarea {
 }
 
 .main_redactor {
-    grid-template-columns: 33.3% 33.3% 33.3% ;
+    grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr)
+        minmax(20px, 1fr) ;
     grid-template-areas:
             "top-left top-center top-right"
             "center center right"
@@ -341,6 +344,40 @@ textarea {
 
 .main_top-right_img {
     margin: auto;
+}
+
+.main_right {
+    grid-template-areas:
+        "mr-p_1 mr-p_1"
+        "mr-img mr-img"
+        "mr-img mr-img"
+        "mr-img mr-img"
+        "mr-p_2 mr-p_2"
+        "mr-b_1 mr-b_2"
+        "mr-p_3 mr-p_3"
+        "mr-b_3 mr-b_4";
+    grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr);
+}
+
+.main_right_p_1 {grid-area: mr-p_1}
+.main_right_img {grid-area: mr-img}
+.main_right_p_2 {grid-area: mr-p_2}
+.main_right_button_1 {grid-area: mr-b_1}
+.main_right_button_2 {grid-area: mr-b_2}
+.main_right_p_3 {grid-area: mr-p_3}
+.main_right_button_3 {grid-area: mr-b_3}
+.main_right_button_4 {grid-area: mr-b_4}
+
+.main_right_img {
+    margin: auto;
+}
+
+.main_right p {
+    background: none;
+    width: auto;
+    line-height: 200%;
 }
 
 /*footer*/
