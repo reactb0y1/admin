@@ -5,6 +5,7 @@
     border: 0;
     outline: none;
     vertical-align: baseline;
+    font-family: Arial;
     font-weight: inherit;
     font-style: inherit;
     font-size: 100%;
@@ -30,10 +31,6 @@ a, button {
     display: inline-block;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-}
-
 a:hover, a:active  {
     text-decoration: underline;
 }
@@ -55,8 +52,10 @@ a:hover, a:active  {
 
     /*Сетка*/
     --widthContent: 1100px;
+    --cells-h: 35px;
 
     /*Отступы*/
+    --g-g: 3px;
 
 }
 
@@ -65,4 +64,123 @@ a:hover, a:active  {
 .container {
     width: 90% !important;
     margin: 40px auto;
+    background: var(--bg-main);
+    display: grid;
+    grid-gap: 3px;
+}
+
+h2 {
+    color: var(--c-f-2);
+    font-size: var(--f-b);
+    line-height: 125%;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    line-height: 150%;
+}
+
+p {
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    line-height: 150%;
+}
+
+button {
+    background: var(--bg-btn);
+    font-size: var(--f-n);
+    color: var(--c-f-1);
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+h2, h3, p, button {
+    height: var(--cells-h);
+}
+
+/*header*/
+
+.header {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.header_top {
+    display: grid;
+    grid-template-areas: "h2 h2 h2 h2 h2 btn"
+                        "p p p p p p";
+    grid-gap: var(--g-g);
+}
+
+.header_top_h2 {grid-area: h2}
+.header_top_button {grid-area: btn}
+.header_top_p {grid-area: p}
+
+.header_nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--g-g);
+}
+
+.header_bottom {
+    display: grid;
+    align-items: center;
+    height: var(--cells-h);
+}
+
+.header_bottom_span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--c-f-2);
+}
+
+/*main*/
+
+.main {
+    display: grid;
+    grid-gap: var(--g-g);
+    min-height: calc(
+            ( var(--cells-h) * 11 ) +
+            ( var(--g-g) * 10 )
+    );
+    align-content: flex-start;
+}
+
+.main h3,
+.main p,
+.main button {
+    text-indent: 12px;
+}
+
+.main p {
+    background-color: var(--bg-blocked);
+    width: 50%;
+    line-height: 200%;
+}
+
+/*footer*/
+
+.footer {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.footer_top {
+    display: grid;
+    align-items: center;
+    height: var(--cells-h);
+}
+
+.footer_top_span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--c-f-2);
+}
+
+.footer_content {
+    height: var(--cells-h);
 }
