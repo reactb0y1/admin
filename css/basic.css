@@ -203,6 +203,10 @@ input {
     width: 50%;
 }
 
+.redactor .main_input {
+    width: calc( 100% / 3 );
+}
+
 .main-mod_1 {
     grid-template-columns: 1fr;
 }
