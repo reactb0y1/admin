@@ -69,6 +69,8 @@ a:hover, a:active  {
     width: 90% !important;
     margin: 40px auto;
     background: var(--bg-main);
+    display: grid;
+    grid-gap: 3px;
 }
 
 h2 {
@@ -99,7 +101,7 @@ h2, p, button {
 
 .header {
     display: grid;
-    grid-gap: 3px;
+    grid-gap: var(--g-g);
 }
 
 .header_top {
@@ -130,4 +132,28 @@ h2, p, button {
     width: 100%;
     height: 3px;
     background-color: var(--c-f-2);
+}
+
+/*footer*/
+
+.footer {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.footer_top {
+    display: grid;
+    align-items: center;
+    height: var(--cells-h);
+}
+
+.footer_top_span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--c-f-2);
+}
+
+.footer_content {
+    height: var(--cells-h);
 }
