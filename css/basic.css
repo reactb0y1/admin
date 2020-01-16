@@ -41,6 +41,7 @@ a:hover, a:active  {
     --f-b: 30px;
     --f-n: 19.5px;
     --f-s: 15.5px;
+    --t-i: 12px;
 
     /*Цвета*/
     --bg-main: #f2f2f2;
@@ -63,7 +64,7 @@ a:hover, a:active  {
 /*Универсальные классы*/
 .container {
     width: 90% !important;
-    margin: 40px auto;
+    margin: 0 auto;
     background: var(--bg-main);
     display: grid;
     grid-gap: 3px;
@@ -79,7 +80,7 @@ h2 {
 h3 {
     color: var(--c-f-2);
     font-size: var(--f-n);
-    line-height: 150%;
+    line-height: 200%;
 }
 
 p {
@@ -96,8 +97,20 @@ button {
     font-weight: bold;
 }
 
-h2, h3, p, button {
+select, option {
+    text-indent: var(--t-i);
+    font-size: var(--f-s);
+    color: var(--c-f-2);
+}
+
+h2, h3, p, button, input {
     height: var(--cells-h);
+}
+
+input {
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    text-indent: var(--t-i);
 }
 
 /*header*/
@@ -109,14 +122,10 @@ h2, h3, p, button {
 
 .header_top {
     display: grid;
-    grid-template-areas: "h2 h2 h2 h2 h2 btn"
-                        "p p p p p p";
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: var(--cells-h) var(--cells-h);
     grid-gap: var(--g-g);
 }
-
-.header_top_h2 {grid-area: h2}
-.header_top_button {grid-area: btn}
-.header_top_p {grid-area: p}
 
 .header_nav {
     display: grid;
@@ -152,13 +161,69 @@ h2, h3, p, button {
 .main h3,
 .main p,
 .main button {
-    text-indent: 12px;
+    text-indent: var(--t-i);
 }
 
 .main p {
     background-color: var(--bg-blocked);
     width: 50%;
     line-height: 200%;
+}
+
+.main_list {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.main_list_item {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+}
+
+.main_input {
+    width: 50%;
+}
+
+.main-mod_1 {
+    grid-template-columns: 1fr;
+}
+
+.main-mod_2 {
+
+}
+
+.main_header, .main-mod_2 .main_list_item {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns:
+                        calc( 100% / 6 )
+                        calc( 4 * 100% / 6 )
+                        calc( 100% / 6 );
+}
+
+.main_email {
+    overflow: auto;
+    height: calc(
+            var(--cells-h) * 8 +
+            var(--g-g) * 7
+    );
+}
+
+.main_email_li {
+    text-indent: var(--t-i);
+    color: var(--c-f-2);
+}
+
+.main_textarea {
+    resize: none;
+    height: calc(
+            var(--cells-h) * 3 +
+            var(--g-g) * 2
+    );
+    text-indent: var(--t-i);
+    padding-top: var(--t-i);
+    color: var(--c-f-2);
 }
 
 /*footer*/
@@ -183,4 +248,7 @@ h2, h3, p, button {
 
 .footer_content {
     height: var(--cells-h);
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns: 1fr 3fr 2fr;
 }

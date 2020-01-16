@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="../../css/basic.css">
 </head>
 <body>
 
@@ -15,7 +15,8 @@
     <header class="header">
 
         <div class="header_top">
-            <h2 class="header_top_h2">Главная</h2>
+            <h2 class="header_top_h2">Добавить Модератора</h2>
+            <button class="header_top_button-back">Назад</button>
             <button class="header_top_button">Выход</button>
             <p class="header_top_p">Администратор</p>
         </div>
@@ -35,13 +36,15 @@
 
     </header>
 
-    <main class="main">
+    <main class="main main-mod_1">
 
-        <h3 class="main_h3">Данные для обратной связи:</h3>
-        <p class="main_p">Евгений</p>
-        <p class="main_p">8 912 854 96 89</p>
-        <p class="main_p">info@3dmenu.ru</p>
-        <p class="main_p">Ижевск</p>
+        <h3 class="main_h3">Укажите данные:</h3>
+        <input type="text" class="main_input" placeholder="ФИО">
+        <input type="text" class="main_input" placeholder="Город">
+        <input type="text" class="main_input" placeholder="Почта">
+        <input type="text" class="main_input" placeholder="Телефон">
+        <input type="text" class="main_input" placeholder="Логин">
+        <input type="text" class="main_input" placeholder="Пароль">
 
     </main>
 
@@ -50,12 +53,16 @@
         <div class="footer_top">
             <span class="footer_top_span"></span>
         </div>
-        <div class="footer_content"></div>
+        <div class="footer_content">
+            <button class="footer_content_button">Добавить</button>
+            <div></div>
+            <div></div>
+        </div>
 
     </footer>
 
 </section>
 
-<script src="js/common.js"></script>
+<script src="../../js/common.js"></script>
 </body>
 </html>
