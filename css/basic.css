@@ -56,6 +56,7 @@ a:hover, a:active  {
 
     /*Сетка*/
     --widthContent: 1100px;
+    --cells-h: 35px;
 
     /*Отступы*/
     --g-g: 3px;
@@ -90,11 +91,16 @@ button {
 }
 
 h2, p, button {
-    height: 35px;
+    height: var(--cells-h);
     font-weight: bold;
 }
 
 /*header*/
+
+.header {
+    display: grid;
+    grid-gap: 3px;
+}
 
 .header_top {
     display: grid;
@@ -111,4 +117,17 @@ h2, p, button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--g-g);
+}
+
+.header_bottom {
+    display: grid;
+    align-items: center;
+    height: var(--cells-h);
+}
+
+.header_bottom_span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--c-f-2);
 }
