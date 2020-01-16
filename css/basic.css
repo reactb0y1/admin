@@ -113,6 +113,10 @@ input {
     text-indent: var(--t-i);
 }
 
+textarea {
+    resize: none;
+}
+
 .blocked {
     background-color: var(--bg-blocked);
     color: var(--c-f-2);
@@ -255,6 +259,10 @@ input {
                         "bottom bottom right";
 }
 
+.main_redactor > * {
+    grid-gap: var(--g-g);
+}
+
 .main_top-left {grid-area: top-left }
 .main_top-center {grid-area: top-center }
 .main_top-right {grid-area: top-right }
@@ -262,7 +270,44 @@ input {
 .main_right {grid-area: right }
 .main_bottom {grid-area: bottom }
 
-/*footer*/
+.main_top-left {
+    /*max-width: calc( 100% / 3 );*/
+    display: grid;
+    grid-template-areas:
+                        "mtl-input mtl-label"
+                        "mtl-textarea mtl-textarea"
+                        "mtl-textarea mtl-textarea";
+}
+
+.main_top-left_input {grid-area: mtl-input}
+.main_top-left_label {grid-area: mtl-label}
+.main_top-left_textarea {grid-area: mtl-textarea}
+
+.main_top-left_label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+}
+
+.main_top-left_check {
+    width: 20px;
+}
+
+.main_top-left_textarea {
+    min-height: calc(
+            var(--cells-h) * 2 +
+            var(--g-g)
+    );
+    text-indent: var(--t-i);
+    padding-top: var(--t-i);
+    font-size: var(--f-n);
+    color: var(--c-f-2);
+}
+
+    /*footer*/
 
 .footer {
     display: grid;
