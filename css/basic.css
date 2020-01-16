@@ -80,7 +80,7 @@ h2 {
 h3 {
     color: var(--c-f-2);
     font-size: var(--f-n);
-    line-height: 150%;
+    line-height: 200%;
 }
 
 p {
@@ -103,8 +103,14 @@ select, option {
     color: var(--c-f-2);
 }
 
-h2, h3, p, button {
+h2, h3, p, button, input {
     height: var(--cells-h);
+}
+
+input {
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    text-indent: var(--t-i);
 }
 
 /*header*/
@@ -167,6 +173,17 @@ h2, h3, p, button {
     background-color: var(--bg-blocked);
     width: 50%;
     line-height: 200%;
+}
+
+.main_list {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.main_list_item {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns: 2fr 2fr 1fr 1fr;
 }
 
 /*footer*/
