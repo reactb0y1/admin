@@ -258,7 +258,7 @@ textarea {
         minmax(20px, 1fr)
         minmax(20px, 1fr) ;
     grid-template-areas:
-            "top-left top-center top-right"
+            "top-left top-center right"
             "center center right"
             "bottom bottom right";
 }
@@ -348,15 +348,22 @@ textarea {
 
 .main_right {
     grid-template-areas:
-        "mr-p_1 mr-p_1"
-        "mr-img mr-img"
-        "mr-img mr-img"
-        "mr-img mr-img"
-        "mr-p_2 mr-p_2"
-        "mr-b_1 mr-b_2"
-        "mr-p_3 mr-p_3"
-        "mr-b_3 mr-b_4";
+        "mtr-p_1 mtr-p_1 mtr-p_1 mtr-img"
+        "mtr-p_2 mtr-p_2 mtr-p_2 mtr-img"
+        "mtr-input mtr-input mtr-input mtr-input"
+
+        "mr-p_1 mr-p_1 mr-p_1 mr-p_1"
+        "mr-img mr-img mr-img mr-img"
+        "mr-img mr-img mr-img mr-img"
+        "mr-img mr-img mr-img mr-img"
+
+        "mr-p_2 mr-p_2 mr-p_2 mr-p_2"
+        "mr-b_1 mr-b_1 mr-b_2 mr-b_2"
+        "mr-p_3 mr-p_3 mr-p_3 mr-p_3"
+        "mr-b_3 mr-b_3 mr-b_4 mr-b_4";
     grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr)
         minmax(20px, 1fr)
         minmax(20px, 1fr);
 }
