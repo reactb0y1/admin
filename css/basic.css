@@ -194,6 +194,19 @@ input {
     grid-template-columns: 1fr;
 }
 
+.main-mod_2 {
+
+}
+
+.main_header, .main_list_item {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns:
+                        calc( 100% / 6 )
+                        calc( 4 * 100% / 6 )
+                        calc( 100% / 6 );
+}
+
 /*footer*/
 
 .footer {
