@@ -502,6 +502,56 @@ textarea {
     max-height: 25%;
 }
 
+.main_left_ul {
+    display: grid;
+    grid-gap: var(--g-g);
+    overflow: auto;
+    max-height: calc(
+        10 * var(--cells-h) +
+        9 * var(--g-g)
+    );
+}
+
+.main_left_li {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns:
+        minmax(20px, 2fr)
+        minmax(20px, 1fr);
+    max-height: calc(
+        var(--cells-h) * 2 +
+        var(--g-g)
+    );
+    min-height: calc(
+        var(--cells-h) * 2 +
+        var(--g-g)
+    );
+}
+
+.main_left_li > * {
+    background: var(--bg-blocked);
+    display: flex;
+    justify-content: space-between;
+}
+
+.position_right {
+    padding: var(--t-i);
+}
+
+.position_right_label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    line-height: 150%;
+}
+
+.position_right_label .position_right_check {
+    width: 20px !important;
+}
+
+
 /*footer*/
 
 .footer {
