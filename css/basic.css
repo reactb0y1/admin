@@ -212,6 +212,10 @@ textarea {
     grid-template-columns: 2fr 2fr 1fr 1fr;
 }
 
+.main_list_item p {
+    width: auto;
+}
+
 .main_input {
     width: 50%;
 }
@@ -232,9 +236,9 @@ textarea {
     display: grid;
     grid-gap: var(--g-g);
     grid-template-columns:
-            calc( 100% / 6 )
-            calc( 4 * 100% / 6 )
-            calc( 100% / 6 );
+            minmax( 20px, 1fr )
+            minmax( 20px, 4fr )
+            minmax( 20px, 1fr );
 }
 
 .main_email {
