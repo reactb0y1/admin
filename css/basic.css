@@ -43,6 +43,7 @@ a:hover, a:active  {
     --f-n: 19.5px;
     --f-s: 15.5px;
     --t-i: 12px;
+    --w-check: 20px;
 
     /*Цвета*/
     --bg-main: #f2f2f2;
@@ -112,6 +113,10 @@ input {
     color: var(--c-f-2);
     font-size: var(--f-n);
     text-indent: var(--t-i);
+}
+
+input[type="checkbox"] {
+    width: var(--w-check);
 }
 
 textarea {
@@ -300,10 +305,6 @@ textarea {
     font-size: var(--f-n);
 }
 
-.main_top-left_check {
-    width: 20px;
-}
-
 .main_top-left_textarea {
     min-height: calc(
             var(--cells-h) * 2 +
@@ -425,7 +426,6 @@ textarea {
 .main_bottom_li_check {
     position: absolute;
     z-index: 2;
-    width: 20px;
     left: 314px;
 }
 
@@ -548,7 +548,7 @@ textarea {
 }
 
 .position_right_label .position_right_check {
-    width: 20px !important;
+    width: var(--w-check) !important;
 }
 
 
