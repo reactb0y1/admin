@@ -24,6 +24,7 @@ body {
 
 img {
     display: block;
+    cursor: pointer;
 }
 
 a, button {
@@ -438,6 +439,118 @@ textarea {
     background: var(--bg-blocked);
     width: auto;
 }
+
+.main-left_right {
+    grid-template-columns:
+        minmax(20px, 3fr)
+        minmax(20px, 1fr)
+        minmax(20px, 2fr);
+    grid-template-areas:
+        "ml . mb";
+    align-content: stretch;
+}
+
+.maim_left {grid-area: ml}
+.main_buttons {grid-area: mb}
+
+.maim_left {
+    display: grid;
+    grid-gap: var(--g-g);
+    align-self: flex-start;
+}
+
+.main-left_right input,
+.main-left_right h3,
+.main-left_right p {
+    width: auto !important;
+}
+
+.main-left_right p {
+    background: none !important;
+}
+
+.main_buttons {
+    display: grid;
+    grid-gap: var(--g-g);
+    align-self: flex-end;
+}
+
+.main_buttons_wrapper {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-areas:
+        "mbw-p mbw-p"
+        "mbw-b_1 mbw-b_2";
+    grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr);
+}
+
+.main_buttons_p {grid-area: mbw-p}
+.main_buttons_btn_1 {grid-area: mbw-b_1}
+.main_buttons_btn_2 {grid-area: mbw-b_2}
+
+.maim_left-img {
+
+}
+
+.maim_left-img_img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 15%;
+    max-height: 25%;
+}
+
+.main_left_ul {
+    display: grid;
+    grid-gap: var(--g-g);
+    overflow: auto;
+    max-height: calc(
+        10 * var(--cells-h) +
+        9 * var(--g-g)
+    );
+}
+
+.main_left_li {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-columns:
+        minmax(20px, 2fr)
+        minmax(20px, 1fr);
+    max-height: calc(
+        var(--cells-h) * 2 +
+        var(--g-g)
+    );
+    min-height: calc(
+        var(--cells-h) * 2 +
+        var(--g-g)
+    );
+}
+
+.main_left_li > * {
+    background: var(--bg-blocked);
+    display: flex;
+    justify-content: space-between;
+}
+
+.position_right {
+    padding: var(--t-i);
+}
+
+.position_right_label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--c-f-2);
+    font-size: var(--f-n);
+    line-height: 150%;
+}
+
+.position_right_label .position_right_check {
+    width: 20px !important;
+}
+
 
 /*footer*/
 
