@@ -85,7 +85,7 @@ h3 {
     line-height: 200%;
 }
 
-p {
+p, p > span {
     color: var(--c-f-2);
     font-size: var(--f-n);
     line-height: 150%;
