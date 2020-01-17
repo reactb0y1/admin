@@ -92,12 +92,14 @@ p, p > span {
     line-height: 150%;
 }
 
-button {
+button, .header a {
     background: var(--bg-btn);
     font-size: var(--f-n);
     color: var(--c-f-1);
     border-radius: 3px;
     font-weight: bold;
+    text-align: center;
+    line-height: 1.85;
 }
 
 select, option {
@@ -125,8 +127,8 @@ textarea {
 }
 
 .blocked {
-    background-color: var(--bg-blocked);
-    color: var(--c-f-2);
+    background-color: var(--bg-blocked) !important;
+    color: var(--c-f-2) !important;
 }
 
 /*header*/
