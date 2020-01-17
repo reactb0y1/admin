@@ -24,6 +24,7 @@ body {
 
 img {
     display: block;
+    cursor: pointer;
 }
 
 a, button {
@@ -488,6 +489,18 @@ textarea {
 .main_buttons_p {grid-area: mbw-p}
 .main_buttons_btn_1 {grid-area: mbw-b_1}
 .main_buttons_btn_2 {grid-area: mbw-b_2}
+
+.maim_left-img {
+
+}
+
+.maim_left-img_img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 15%;
+    max-height: 25%;
+}
 
 /*footer*/
 
