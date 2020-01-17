@@ -267,14 +267,16 @@ textarea {
 
 .main_redactor {
     grid-template-columns:
-        minmax(20px, 1fr)
-        minmax(20px, 1fr)
+        minmax(20px, 2fr)
         minmax(20px, 1fr) ;
     grid-template-areas:
-            "top-left top-center right"
-            "center center right"
-            "bottom bottom right";
+            "mrl mrr"
+            "mrl mrr"
+            "mrl mrr";
 }
+
+/*.main_redactor_left {grid-area: mrl}*/
+.main_redactor_right {grid-area: mrr}
 
 .main_redactor > * {
     display: grid;
@@ -285,7 +287,7 @@ textarea {
 .main_top-center {grid-area: top-center }
 .main_top-right {grid-area: top-right }
 .main_center {grid-area: center }
-.main_right {grid-area: right }
+/*.main_right {grid-area: right }*/
 .main_bottom {grid-area: bottom }
 
 .main_top-left {
@@ -297,6 +299,7 @@ textarea {
             "mtl-input mtl-label"
             "mtl-textarea mtl-textarea"
             "mtl-textarea mtl-textarea";
+    grid-gap: var(--g-g);
 }
 
 .main_top-left_input {grid-area: mtl-input}
@@ -417,6 +420,33 @@ textarea {
 .main_right_button_3 {grid-area: mrb-btn_3}
 .main_right_button_4 {grid-area: mrb-btn_4}
 
+.main_redactor_left {
+    display: grid;
+    grid-gap: var(--g-g);
+    grid-template-areas:
+        "ml-tl ml-tc"
+        "ml-c ml-c"
+        "ml-b ml-b";
+    grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr);
+    max-height: calc(
+        11 * var(--cells-h) +
+        10 * var(--g-g)
+    );
+    overflow: auto;
+}
+
+.main_top-left {grid-area: ml-tl}
+.main_top-center {grid-area: ml-tc}
+.main_center {grid-area: ml-c}
+.main_bottom {grid-area: ml-b}
+
+.main_top-center, .main_center, .main_bottom  {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
 .main_right_img {
     margin: auto;
 }
@@ -464,7 +494,7 @@ textarea {
 .main_bottom_li_check {
     position: absolute;
     z-index: 2;
-    left: 314px;
+    left: 305px;
 }
 
 .main_center_table {
