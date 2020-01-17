@@ -357,19 +357,25 @@ textarea {
 
 .main_right {
     grid-template-areas:
+        "mrt"
+        "mrc"
+        "mrb";
+}
+
+.main_right_top {grid-area: mrt}
+.main_right_center {grid-area: mrc}
+.main_right_bottom {grid-area: mrb}
+
+.main_right_top, .main_right_center, .main_right_bottom {
+    display: grid;
+    grid-gap: var(--g-g);
+}
+
+.main_right_top {
+    grid-template-areas:
         "mtr-p_1 mtr-p_1 mtr-p_1 mtr-img"
         "mtr-p_2 mtr-p_2 mtr-p_2 mtr-img"
-        "mtr-input mtr-input mtr-input mtr-input"
-
-        "mr-p_1 mr-p_1 mr-p_1 mr-p_1"
-        "mr-img mr-img mr-img mr-img"
-        "mr-img mr-img mr-img mr-img"
-        "mr-img mr-img mr-img mr-img"
-
-        "mr-p_2 mr-p_2 mr-p_2 mr-p_2"
-        "mr-b_1 mr-b_1 mr-b_2 mr-b_2"
-        "mr-p_3 mr-p_3 mr-p_3 mr-p_3"
-        "mr-b_3 mr-b_3 mr-b_4 mr-b_4";
+        "mtr-i mtr-i mtr-i mtr-i";
     grid-template-columns:
         minmax(20px, 1fr)
         minmax(20px, 1fr)
@@ -377,14 +383,39 @@ textarea {
         minmax(20px, 1fr);
 }
 
-.main_right_p_1 {grid-area: mr-p_1}
-.main_right_img {grid-area: mr-img}
-.main_right_p_2 {grid-area: mr-p_2}
-.main_right_button_1 {grid-area: mr-b_1}
-.main_right_button_2 {grid-area: mr-b_2}
-.main_right_p_3 {grid-area: mr-p_3}
-.main_right_button_3 {grid-area: mr-b_3}
-.main_right_button_4 {grid-area: mr-b_4}
+.main_top-right_p_1 {grid-area: mtr-p_1}
+.main_top-right_p_2 {grid-area: mtr-p_2}
+.main_top-right_img {grid-area: mtr-img}
+.main_top-right_input {grid-area: mtr-i}
+
+.main_right_center {
+    grid-template-areas:
+        "mrc-p"
+        "mrc-img"
+        "mrc-img"
+        "mrc-img";
+}
+
+.main_right_p_1 {grid-area: mrc-p}
+.main_right_img {grid-area: mrc-img}
+
+.main_right_bottom {
+    grid-template-areas:
+        "mrb-p_2 mrb-p_2"
+        "mrb-btn_1 mrb-btn_2"
+        "mrb-p_3 mrb-p_3"
+        "mrb-btn_3 mrb-btn_4";
+    grid-template-columns:
+        minmax(20px, 1fr)
+        minmax(20px, 1fr);
+}
+
+.main_right_p_2 {grid-area: mrb-p_2}
+.main_right_button_1 {grid-area: mrb-btn_1}
+.main_right_button_2 {grid-area: mrb-btn_2}
+.main_right_p_3 {grid-area: mrb-p_3}
+.main_right_button_3 {grid-area: mrb-btn_3}
+.main_right_button_4 {grid-area: mrb-btn_4}
 
 .main_right_img {
     margin: auto;
