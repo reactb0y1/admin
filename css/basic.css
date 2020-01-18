@@ -49,6 +49,7 @@ a, button {
 
     --c-f-1: #ffffff;
     --c-f-2: #888888;
+    --с-f-blocked: #bdbbbc;
 
     /*Сетка*/
     --widthContent: 1100px;
@@ -124,7 +125,7 @@ textarea {
 
 .blocked {
     background-color: var(--bg-blocked) !important;
-    color: var(--c-f-2) !important;
+    color: var(--с-f-blocked) !important;
 }
 
 /*header*/
