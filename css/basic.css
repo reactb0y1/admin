@@ -765,6 +765,7 @@ textarea {
 
 .header_top_p_span-inst,
 .header_top_p-inst,
-.footer_content_select-inst {
+.footer_content_select-inst,
+.footer_content_button-inst {
     display: none;
 }
