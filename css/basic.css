@@ -756,3 +756,7 @@ textarea {
 .main_list_item_button-moderator {
     display: none;
 }
+
+.footer_content_button-moderator {
+    display: none;
+}
