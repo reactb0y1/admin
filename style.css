@@ -612,7 +612,7 @@ textarea {
     line-height: 150%;
 }
 
-.position_right_label .position_right_check {
+.position_right .position_right_check {
     width: var(--w-check) !important;
 }
 
