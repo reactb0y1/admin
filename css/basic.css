@@ -32,10 +32,6 @@ a, button {
     display: inline-block;
 }
 
-a:hover, a:active  {
-    text-decoration: underline;
-}
-
 /*Переменные*/
 :root {
     /*Типографика*/
@@ -753,21 +749,12 @@ textarea {
     color: var(--c-f-2) !important;
 }
 
-.main_list_item_button-moderator {
-    display: none;
-}
-
-.footer_content_button-moderator {
+.moder_none {
     display: none;
 }
 
 /*inst*/
 
-.header_top_p_span-inst,
-.header_top_p-inst,
-.footer_content_select-inst,
-.footer_content_button-inst,
-.main_buttons-inst,
-.footer_content_button-inst{
+.inst_none {
     display: none;
 }
