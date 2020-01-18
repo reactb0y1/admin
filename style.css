@@ -20,6 +20,10 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-body);
 }
 
 img {
@@ -46,6 +50,8 @@ a, button {
     --bg-btn: #888888;
     --bg-btn-login: #6b0008;
     --bg-blocked: #e1e1e1;
+    --bg-body: rgb(242,242,242);
+    --bg-container: rgb(235,235,235);
 
     --c-f-1: #ffffff;
     --c-f-2: #888888;
@@ -53,7 +59,7 @@ a, button {
 
     /*Сетка*/
     --widthContent: 1100px;
-    --cells-h: 35px;
+    --cells-h: 32px;
 
     /*Отступы*/
     --g-g: 3px;
@@ -65,7 +71,7 @@ a, button {
 .container {
     width: 1024px !important;
     margin: 0 auto;
-    background: var(--bg-main);
+    background: var(--bg-container);
     display: grid;
     grid-gap: 3px;
 }
