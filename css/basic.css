@@ -760,3 +760,11 @@ textarea {
 .footer_content_button-moderator {
     display: none;
 }
+
+/*inst*/
+
+.header_top_p_span-inst,
+.header_top_p-inst,
+.footer_content_select-inst {
+    display: none;
+}
