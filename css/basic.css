@@ -745,3 +745,14 @@ textarea {
     bottom: calc( var(--cells-h) * -1.5 );
     display: table;
 }
+
+/*moderator*/
+
+.header_nav_button-moder {
+    background: var(--bg-blocked) !important;
+    color: var(--c-f-2) !important;
+}
+
+.main_list_item_button-moderator {
+    display: none;
+}
