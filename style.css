@@ -105,6 +105,10 @@ button, .header a {
     line-height: 1.85;
 }
 
+button {
+    line-height: 1.65;;
+}
+
 select, option {
     text-indent: var(--t-i);
     font-size: var(--f-s);
@@ -169,6 +173,10 @@ textarea {
 
 .header_top > div + .header_top_p {
     text-align: center;
+}
+
+.header_top a {
+    line-height: 1.65;;
 }
 
 /*main*/
@@ -509,6 +517,7 @@ textarea {
 .main_center_table p {
     background: var(--bg-blocked);
     width: auto;
+    line-height: 180%;
 }
 
 .main-left_right {
@@ -745,7 +754,7 @@ textarea {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc( var(--cells-h) * -1.5 );
+    bottom: calc( var(--cells-h) * -1.1 );
     display: table;
 }
 
