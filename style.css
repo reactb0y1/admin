@@ -20,6 +20,10 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-body);
 }
 
 img {
@@ -30,10 +34,6 @@ img {
 a, button {
     cursor: pointer;
     display: inline-block;
-}
-
-a:hover, a:active  {
-    text-decoration: underline;
 }
 
 /*Переменные*/
@@ -50,13 +50,16 @@ a:hover, a:active  {
     --bg-btn: #888888;
     --bg-btn-login: #6b0008;
     --bg-blocked: #e1e1e1;
+    --bg-body: rgb(242,242,242);
+    --bg-container: rgb(235,235,235);
 
     --c-f-1: #ffffff;
     --c-f-2: #888888;
+    --с-f-blocked: #bdbbbc;
 
     /*Сетка*/
     --widthContent: 1100px;
-    --cells-h: 35px;
+    --cells-h: 32px;
 
     /*Отступы*/
     --g-g: 3px;
@@ -68,7 +71,7 @@ a:hover, a:active  {
 .container {
     width: 1024px !important;
     margin: 0 auto;
-    background: var(--bg-main);
+    background: var(--bg-container);
     display: grid;
     grid-gap: 3px;
 }
@@ -102,6 +105,10 @@ button, .header a {
     line-height: 1.85;
 }
 
+button {
+    line-height: 1.65;;
+}
+
 select, option {
     text-indent: var(--t-i);
     font-size: var(--f-s);
@@ -128,7 +135,7 @@ textarea {
 
 .blocked {
     background-color: var(--bg-blocked) !important;
-    color: var(--c-f-2) !important;
+    color: var(--с-f-blocked) !important;
 }
 
 /*header*/
@@ -166,6 +173,10 @@ textarea {
 
 .header_top > div + .header_top_p {
     text-align: center;
+}
+
+.header_top a {
+    line-height: 1.65;;
 }
 
 /*main*/
@@ -506,6 +517,7 @@ textarea {
 .main_center_table p {
     background: var(--bg-blocked);
     width: auto;
+    line-height: 180%;
 }
 
 .main-left_right {
@@ -615,7 +627,7 @@ textarea {
     line-height: 150%;
 }
 
-.position_right_label .position_right_check {
+.position_right .position_right_check {
     width: var(--w-check) !important;
 }
 
@@ -742,6 +754,23 @@ textarea {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc( var(--cells-h) * -1.5 );
+    bottom: calc( var(--cells-h) * -1.1 );
     display: table;
+}
+
+/*moderator*/
+
+.header_nav_button-moder {
+    background: var(--bg-blocked) !important;
+    color: var(--c-f-2) !important;
+}
+
+.moder_none {
+    display: none;
+}
+
+/*inst*/
+
+.inst_none {
+    display: none;
 }

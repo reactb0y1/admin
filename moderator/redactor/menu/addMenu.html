@@ -6,22 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
-<body>
+<body class="moderator">
 
 <section class="container redactor">
 
     <header class="header">
 
         <div class="header_top">
-            <h2 class="header_top_h2">Главная</h2>
-            <div></div>
+            <h2 class="header_top_h2">Добавить позицию</h2>
+            <a href="#" class="header_top_button">Назад</a>
             <a href="#" class="header_top_button">Выход</a>
 
             <p class="header_top_p">Бар "Бочка" <span class="header_top_p_span"> | bar_bochka</span></p>
             <div></div>
-            <p class="header_top_p">Администратор</p>
+            <p class="header_top_p">Модератор</p>
         </div>
 
         <nav class="header_nav">
@@ -39,18 +39,25 @@
 
     </header>
 
-    <main class="main">
+    <main class="main main-left_right">
 
-        <h3 class="main_h3">Данные для обратной связи:</h3>
-        <p class="main_p">Евгений</p>
-        <p class="main_p">8 912 854 96 89</p>
-        <p class="main_p">info@3dmenu.ru</p>
-        <p class="main_p">Ижевск</p>
+        <div class="maim_left">
+            <h3 class="main_h3">Введите описание:</h3>
+            <input type="text" class="main_input">
+            <input type="text" class="main_input">
+            <input type="text" class="main_input">
+            <input type="text" class="main_input">
+            <input type="text" class="main_input">
+            <input type="text" class="main_input">
+        </div>
 
-        <h3 class="main_h3">Ваш менеджер</h3>
-        <p class="main_p">Евгений</p>
-        <p class="main_p">8 912 854 96 89</p>
-        <p class="main_p">info@3dmenu.ru</p>
+        <div class="main_buttons">
+            <div class="main_buttons_wrapper">
+                <p class="main_buttons_p">Загрузка иконки</p>
+                <button class="main_buttons_btn_1">Обзор</button>
+                <button class="main_buttons_btn_2">Загрузить</button>
+            </div>
+        </div>
 
     </main>
 
@@ -60,13 +67,7 @@
             <span class="footer_top_span"></span>
         </div>
         <div class="footer_content">
-            <div></div>
-            <div></div>
-            <div></div>
-            <select class="footer_content_select">
-                <option class="footer_content_option">Отображается</option>
-                <option class="footer_content_option">Не отображается</option>
-            </select>
+            <button class="footer_content_button">Добавить</button>
         </div>
 
     </footer>
